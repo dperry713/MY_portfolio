@@ -1,10 +1,14 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-image: url('space-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
 }
 
 h1, h2 {
@@ -12,18 +16,20 @@ h1, h2 {
 }
 
 section {
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.section-title {
+    color: #00ffff;
 }
 
 /* Home Section */
 #home {
     text-align: center;
 }
-
 #home img {
     border-radius: 50%;
     width: 150px;
@@ -32,15 +38,16 @@ section {
 
 /* About Me Section */
 #about ul {
-    list-style-type: none;
-    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    list-style-position: inside;
 }
 
 #about ul li {
-    background: #e7f3ff;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
+    margin-bottom: 5px;
 }
 
 /* Projects Section */
@@ -113,3 +120,20 @@ section {
 .section-title {
     animation: fadeIn 1s ease-in-out;
 }
+
+
+  #about p, #projects p, #projects ul, #skills ul {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+  }
+
+  #projects a, #skills li {
+      color: #0000FF;
+  }
+
+  #projects a:hover {
+      color: #FF00FF;
+  }
