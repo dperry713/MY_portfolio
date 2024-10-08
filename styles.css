@@ -54,26 +54,37 @@ section {
 #projects ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+  #projects ul li {
+      background: #e7f3ff;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-#projects ul li {
-    background: #e7f3ff;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
-}
-
+  #projects ul li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
 /* Skills Section */
 #skills ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #skills ul li {
     background: #e7f3ff;
-    margin: 5px 0;
     padding: 10px;
     border-radius: 4px;
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 10px;
 }
 
 /* Contact Section */
@@ -116,11 +127,13 @@ section {
         transform: translateY(0);
     }
 }
+  .section-title {
+      transition: transform 0.3s ease;
+  }
 
-.section-title {
-    animation: fadeIn 1s ease-in-out;
-}
-
+  .section-title:hover {
+      transform: scale(1.05);
+  }
 
   #about p, #projects p, #projects ul, #skills ul {
       background-color: rgba(255, 255, 255, 0.8);
@@ -137,3 +150,58 @@ section {
   #projects a:hover {
       color: #FF00FF;
   }
+
+  #contact input[type="submit"] {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  #contact input[type="submit"]:hover {
+      transform: translateY(-2px);
+  }
+
+  #contact input[type="submit"]:active {
+      transform: translateY(1px);
+  }
+
+  @media screen and (max-width: 768px) {
+      body {
+          padding: 10px;
+      }
+      section {
+          padding: 15px;
+      }
+      #home img {
+          width: 100px;
+          height: 100px;
+      }
+  }
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
