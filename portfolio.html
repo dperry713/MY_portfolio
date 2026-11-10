@@ -99,6 +99,7 @@ if (window.lucide && typeof window.lucide.createIcons === "function") window.luc
 }
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initializeIcons);
 else initializeIcons();
+window.addEventListener("load", initializeIcons, { once: true });
 }());
 </script>
 </body></html>
